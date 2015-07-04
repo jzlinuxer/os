@@ -39,6 +39,8 @@ Operating System Concept, Design and Implementation.
 * [How to Make a Computer Operating System](https://github.com/SamyPesse/How-to-Make-a-Computer-Operating-System)
 * [OSASK](https://github.com/Tassandar/OSASK)
 * [OS Dev Wiki](http://wiki.osdev.org/Main_Page)
+* [Linux-0.11 source code](https://github.com/yuanxinyu/Linux-0.11)
+* [Using QEMU for Embedded Systems Development](http://opensourceforu.efytimes.com/2011/06/qemu-for-embedded-systems-development-part-1) [Part2](http://opensourceforu.efytimes.com/2011/07/qemu-for-embedded-systems-development-part-2) [Part 3](http://opensourceforu.efytimes.com/2011/08/qemu-for-embedded-systems-development-part-3)
 
 ## Courses
 * [6.828: Operating System Engineering - MIT](http://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-828-operating-system-engineering-fall-2012)

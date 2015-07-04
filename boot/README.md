@@ -22,4 +22,7 @@
 * [How Computers Boot Up?](http://duartes.org/gustavo/blog/post/how-computers-boot-up/)
 * [How PCs Work?](http://computer.howstuffworks.com/pc3.htm)
 * [Computer Systems: A Programmer's Perspective - Chapter 3 Machine_Level Representation of Programs](http://csapp.cs.cmu.edu)
-
+* [U-Boot -- The Universal Boot Loader](http://www.denx.de/wiki/U-Boot)
+* [QEME - Open Source Processor Emulator](http://wiki.qemu.org/Main_Page)
+* [BusyBox: The Swiss Army Knife of Embedded Linux](http://www.busybox.net)
+* [Buildroot: Making Embedded Linux Easy](http://buildroot.uclibc.org)
