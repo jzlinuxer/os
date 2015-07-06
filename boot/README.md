@@ -16,6 +16,52 @@
 
 ## How to write an OS and load it to the memory?
 
+### Boot Sector
+
+BIOS will load the first sector(512B) to memory address `0x0000:0x7c00`, and check last two byte `55 AA`/`AA 55`.
+
+1. Size 512B.
+2. Last two bytes are "55 AA"(MBR signature).
+3. Should be the first sector.
+
+Byte Order: Big-Endian or Little-Endian?
+
+### Why `0x7c00`? Memory Layout?
+
+The first 1M byte of memory
+
+`0x00000~0x003FF`: Real Mode IVT(Interrupt Vector Table)
+`0x00400~0x004FF`: BDA(BIOS data area)
+`0x00500~0x07BFF`: Conventional memory
+`0x07C00~0x07DFF`: OS Boot Sector
+`0x07E00~0x9FFFF`: Conventional memory
+`0xA0000~0xBFFFF`: Vedio memory
+`0xC0000~0xFFFFF`: System BIOS
+
+### Registers
+EIP:  instruction pointer which holds the memory address for the instruction being executed by the CPU.
+
+
+### Real Mode and Protected Mode
+
+
+### Interrupt
+
+`int 10h`: vedio BIOS services
+
+## Boot Assembly Code
+
+### [Intel - boot.asm](boot.asm)
+
+    nasm boot.asm -o boot.bin
+
+### [ATT - boot.s](boot.s)
+
+    as boot.s -o boot.o
+    ld boot.o -o boot.elf -e c -Tx86.ld
+
+*Note*: [Difference between Intel and AT&T Assembly](Intel-ATT.md)
+
 
 ## Reference
 * [Research on Operating System Boot Process by YunoXie - Chinese](http://sunner.cn/courses/OS/pyos_boot.pdf)
@@ -23,6 +69,6 @@
 * [How PCs Work?](http://computer.howstuffworks.com/pc3.htm)
 * [Computer Systems: A Programmer's Perspective - Chapter 3 Machine_Level Representation of Programs](http://csapp.cs.cmu.edu)
 * [U-Boot -- The Universal Boot Loader](http://www.denx.de/wiki/U-Boot)
-* [QEME - Open Source Processor Emulator](http://wiki.qemu.org/Main_Page)
+* [QEMU - Open Source Processor Emulator](http://wiki.qemu.org/Main_Page)
 * [BusyBox: The Swiss Army Knife of Embedded Linux](http://www.busybox.net)
 * [Buildroot: Making Embedded Linux Easy](http://buildroot.uclibc.org)

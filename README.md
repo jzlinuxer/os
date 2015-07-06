@@ -3,9 +3,13 @@ Operating System Concept, Design and Implementation.
 
 ## Overview
 
+## Foundamentals
+
+* [Inside hello world](hello-world)
+
 ## Implementation
 
-* [Boot](boot/README.md)
+* [Boot](boot)
 
 * Process and Thread
 
